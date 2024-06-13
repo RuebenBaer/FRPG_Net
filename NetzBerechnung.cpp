@@ -53,7 +53,8 @@ void EntfernungsZuwachs(int a_Station, int b_Station, Station* netz, double inte
         //gamma *= (1-2*(distanz<loserAbst));
     }
 
-    if(HatAnhang(netz[b_Station], netz[a_Station]))
+    if(HatAnhang(netz[b_Station], netz[a_Station])
+        || HatAnhang(netz[a_Station], netz[b_Station]))
     {
         c = (b-a);
         c *= delta;
